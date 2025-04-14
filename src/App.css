@@ -1,38 +1,137 @@
-.App {
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  padding: 20px;
+}
+
+/* App container */
+.app-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Heading */
+h1 {
   text-align: center;
+  color: #2d3a45;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Form styling */
+form {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #2d3a45;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+form input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #4acfcf;
+}
+
+form button {
+  padding: 12px;
+  background-color: #4acfcf;
   color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+form button:hover {
+  background-color: #36b1b1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Search bar */
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+  border-color: #4acfcf;
+  outline: none;
+}
+
+/* Expense table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+th {
+  background-color: #f9fafc;
+  color: #2d3a45;
+  border-bottom: 2px solid #e1e5f2;
+}
+
+td {
+  border-bottom: 1px solid #f0f1f6;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fafc;
+}
+
+tbody tr:hover {
+  background-color: #e6f4f4;
+}
+
+/* Delete button */
+button.delete-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+button.delete-btn:hover {
+  background-color: #e64c4c;
 }
